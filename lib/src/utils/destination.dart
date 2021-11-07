@@ -52,14 +52,14 @@ extension DestinationUtils on Destination {
   /// Defines the icon representing a [Destination].
   ///
   /// returns and [Icon] instance representing a [Destination].
-  Icon get icon {
+  IconData get icon {
     switch (this) {
       case Destination.messaging:
-        return const Icon(Icons.forum);
+        return Icons.forum;
       case Destination.events:
-        return const Icon(Icons.event);
+        return Icons.event;
       case Destination.tools:
-        return const Icon(Icons.handyman);
+        return Icons.handyman;
     }
   }
 
