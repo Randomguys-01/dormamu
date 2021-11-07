@@ -5,6 +5,8 @@ class EventsDestination extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text('Events'));
+    return const Scaffold(
+      body: Center(child: Text('Events')),
+    );
   }
 }
