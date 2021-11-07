@@ -1,6 +1,7 @@
 import 'package:dormamu/src/navigation.dart';
 import 'package:dormamu/src/state/navigation_state.dart';
 import 'package:dormamu/src/utils/destination.dart';
+import 'package:dormamu/theme.dart' as theme;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -13,6 +14,7 @@ class Dormamu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: theme.dormamuTheme,
       home: Scaffold(
         body: Consumer<NavigationState>(builder: (_, navigationState, __) {
           return _buildBody(context, navigationState.currentDestination.widget);

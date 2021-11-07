@@ -4,6 +4,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../theme.dart' as theme;
+
 /// Determines if a [DormamuNavigationBar] is needed and builds it if necessary.
 ///
 /// This function uses [LayoutBuilder] to determine if a [NavigationBar] is the
@@ -54,7 +56,7 @@ class DormamuBottomNavigationBar extends StatelessWidget {
         items: <BottomNavigationBarItem>[
           for (var destination in Destination.values)
             BottomNavigationBarItem(
-              icon: destination.icon,
+              icon: Icon(destination.icon),
               label: destination.name,
             ),
         ],
@@ -103,7 +105,7 @@ class DormamuNavigationRail extends StatelessWidget {
             destinations: <NavigationRailDestination>[
               for (var destination in Destination.values)
                 NavigationRailDestination(
-                  icon: destination.icon,
+                  icon: Icon(destination.icon),
                   label: Text(destination.name),
                 ),
             ],
@@ -148,17 +150,34 @@ class DormamuNavigationDrawer extends StatelessWidget {
       children: [
         Consumer<NavigationState>(builder: (_, navigationData, __) {
           return Drawer(
-            child: ListView(
-              children: <Widget>[
-                for (var destination in Destination.values)
-                  ListTile(
-                    leading: destination.icon,
-                    title: Text(destination.name),
-                    selected: navigationData.currentDestination == destination,
-                    onTap: () =>
-                        navigationData.currentDestination = destination,
-                  ),
-              ],
+            child: Container(
+              color: theme.primaryColor,
+              child: ListView(
+                children: <Widget>[
+                  for (var destination in Destination.values)
+                    ListTile(
+                      leading: Icon(
+                        destination.icon,
+                        color: navigationData.currentDestination == destination
+                            ? theme.selectedItemColor
+                            : theme.unselectedItemColor,
+                      ),
+                      title: Text(
+                        destination.name,
+                        style: TextStyle(
+                          color:
+                              navigationData.currentDestination == destination
+                                  ? theme.selectedItemColor
+                                  : theme.unselectedItemColor,
+                        ),
+                      ),
+                      selected:
+                          navigationData.currentDestination == destination,
+                      onTap: () =>
+                          navigationData.currentDestination = destination,
+                    ),
+                ],
+              ),
             ),
           );
         }),
