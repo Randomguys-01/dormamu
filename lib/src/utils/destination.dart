@@ -1,5 +1,5 @@
+import 'package:dormamu/src/messaging/messaging.dart';
 import 'package:dormamu/src/screens/events.dart';
-import 'package:dormamu/src/screens/messaging.dart';
 import 'package:dormamu/src/screens/tools.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
