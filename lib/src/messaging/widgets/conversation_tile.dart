@@ -1,4 +1,5 @@
 import 'package:dormamu/src/messaging/models/conversation.dart';
+import 'package:dormamu/src/messaging/screens/conversation/conversation_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -63,6 +64,15 @@ class ConversationTile extends StatelessWidget {
       ),
       onTap: () {
         //TODO: Set conversation to read
+
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => ConversationScreen(
+              conversationId: _conversation.conversationId,
+            ),
+          ),
+        );
       },
     );
   }
