@@ -1,4 +1,3 @@
-import 'package:dormamu/src/messaging/screens/conversation/widgets/app_bar.dart';
 import 'package:dormamu/src/messaging/screens/conversation/widgets/message_list.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +15,7 @@ class ConversationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const ConversationAppBar(conversationName: 'Ian White'),
+      appBar: AppBar(title: const Text('Ian White')),
       body: Column(
         children: <Widget>[
           Expanded(
