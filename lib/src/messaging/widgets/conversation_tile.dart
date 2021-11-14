@@ -1,3 +1,4 @@
+import 'package:dormamu/src/messaging/models/conversation.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -7,7 +8,9 @@ import '../../../theme.dart' as theme;
 ///
 /// Conversation uses a [ListTile] to show a group of messages between users. It
 /// shows the recipient's initials and name. It also shows a preview of the most
-/// recently sent message and the date of that message.
+/// recently sent message and the date of that message. If the most recent
+/// message has not been read, the title and timestamp are bolded to alert the
+/// user of an unread message.
 ///
 /// See Also:
 ///
@@ -15,16 +18,12 @@ import '../../../theme.dart' as theme;
 class ConversationTile extends StatelessWidget {
   const ConversationTile({
     Key? key,
-    required this.initials,
-    required this.name,
-    required this.messagePreview,
-    required this.timeStamp,
-  }) : super(key: key);
+    required Conversation conversation,
+  })  : _conversation = conversation,
+        super(key: key);
 
-  final String initials;
-  final String name;
-  final String messagePreview;
-  final DateTime timeStamp;
+  /// Stores the information used to create the [ConversationTile].
+  final Conversation _conversation;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +38,7 @@ class ConversationTile extends StatelessWidget {
         child: Align(
           alignment: Alignment.center,
           child: Text(
-            initials,
+            _conversation.initials,
             style: const TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.bold,
@@ -47,10 +46,24 @@ class ConversationTile extends StatelessWidget {
           ),
         ),
       ),
-      title: Text(name),
-      subtitle: Text(messagePreview),
-      trailing: Text(formatDateTime(timeStamp)),
-      onTap: () {},
+      title: Text(
+        _conversation.conversationName,
+        style: TextStyle(
+          fontWeight:
+              _conversation.isRead ? FontWeight.normal : FontWeight.bold,
+        ),
+      ),
+      subtitle: Text(_conversation.messagePreview),
+      trailing: Text(
+        formatDateTime(_conversation.lastTimestamp),
+        style: TextStyle(
+          fontWeight:
+              _conversation.isRead ? FontWeight.normal : FontWeight.bold,
+        ),
+      ),
+      onTap: () {
+        //TODO: Set conversation to read
+      },
     );
   }
 
@@ -74,5 +87,4 @@ class ConversationTile extends StatelessWidget {
       return DateFormat('M/d/y').format(dateTime);
     }
   }
-//TODO: comment this and commit; fake data; fab(gotta figure out how to do animation when changing tabs, may need to use scaffold on every tab)
 }
