@@ -1,6 +1,7 @@
+import 'package:dormamu/src/messaging/widgets/messaging_tab.dart';
 import 'package:flutter/material.dart';
 
-import 'tabs/_tabs.dart';
+import 'models/conversation.dart';
 
 class MessagingDestination extends StatelessWidget {
   const MessagingDestination({Key? key}) : super(key: key);
@@ -23,9 +24,9 @@ class MessagingDestination extends StatelessWidget {
         ),
         body: const TabBarView(
           children: [
-            CommunityMessaging(),
-            DirectMessaging(),
-            GroupMessaging(),
+            MessagingTab(conversationType: ConversationType.community),
+            MessagingTab(conversationType: ConversationType.direct),
+            MessagingTab(conversationType: ConversationType.group),
           ],
         ),
       ),
