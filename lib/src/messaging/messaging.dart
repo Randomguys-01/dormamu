@@ -1,4 +1,5 @@
 import 'package:dormamu/src/messaging/widgets/messaging_tab.dart';
+import 'package:dormamu/src/messaging/widgets/new_conversation_fab.dart';
 import 'package:flutter/material.dart';
 
 import 'models/conversation.dart';
@@ -29,6 +30,7 @@ class MessagingDestination extends StatelessWidget {
             MessagingTab(conversationType: ConversationType.group),
           ],
         ),
+        floatingActionButton: const NewConversationFAB(),
       ),
     );
   }
