@@ -1,6 +1,7 @@
-
 /// Represents other users the current user can start a conversation with.
 class Contact {
+  /// unique id for each contact (user)
+  final int uuid;
 
   /// The name of the contact.
   final String name;
@@ -13,6 +14,7 @@ class Contact {
 
   /// Default constructor requires all parameters.
   Contact({
+    required this.uuid,
     required this.name,
     required this.email,
     required this.floor,
