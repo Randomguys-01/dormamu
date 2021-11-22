@@ -1,5 +1,7 @@
 import 'package:dormamu/src/messaging/screens/new_conversation/models/contact.dart';
+import 'package:dormamu/src/messaging/screens/new_conversation/models/contact_list_state.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'contact_tile.dart';
 
@@ -20,10 +22,15 @@ class ContactList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: _contacts.length,
-        itemBuilder: (_, int index) {
-          return ContactTile(contact: _contacts[index]);
-        });
+    return Consumer<ContactListState>(builder: (_, listState, __) {
+      return ListView.builder(
+          itemCount: _contacts.length,
+          itemBuilder: (_, int index) {
+            return ContactTile(
+              contact: _contacts[index],
+              selected: listState.isSelected(_contacts[index].uuid),
+            );
+          });
+    });
   }
 }
