@@ -1,4 +1,4 @@
-import 'package:dormamu/src/screens/events.dart';
+import 'package:dormamu/src/events/events.dart';
 import 'package:dormamu/src/screens/messaging.dart';
 import 'package:dormamu/src/screens/tools.dart';
 import 'package:flutter/cupertino.dart';
