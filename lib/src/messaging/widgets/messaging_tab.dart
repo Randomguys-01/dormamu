@@ -1,5 +1,7 @@
 import 'package:dormamu/src/messaging/models/conversation.dart';
+import 'package:dormamu/src/messaging/models/conversation_list_state.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'message_list.dart';
 
@@ -14,12 +16,10 @@ class MessagingTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MessageList(
-      conversations: <Conversation>[
-
-      ].where((Conversation conversation) {
-        return conversation.conversationType == _conversationType;
-      }).toList(),
-    );
+    return Consumer<ConversationListState>(builder: (_, listState, __) {
+      return MessageList(
+        conversations: listState.getConversationByType(_conversationType),
+      );
+    });
   }
 }
