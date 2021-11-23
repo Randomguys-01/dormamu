@@ -10,7 +10,6 @@ enum EventType { community, private }
 
 /// Represents an Event that can be created on the app.
 class Event {
-
   /// The id used to identify this event.
   final int id;
 
@@ -29,6 +28,9 @@ class Event {
   /// The date and time the event ends.
   final DateTime endDate;
 
+  /// The number of likes this event has.
+  final int likes;
+
   /// Default constructor requires all fields.
   const Event({
     required this.id,
@@ -37,5 +39,6 @@ class Event {
     required this.eventType,
     required this.startDate,
     required this.endDate,
+    required this.likes,
   });
 }
