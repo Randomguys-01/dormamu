@@ -8,6 +8,7 @@
 /// friends.
 enum EventType { community, private }
 
+/// Represents an Event that can be created on the app.
 class Event {
 
   /// The id used to identify this event.
