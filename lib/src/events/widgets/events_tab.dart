@@ -1,5 +1,9 @@
 import 'package:dormamu/src/events/models/event.dart';
+import 'package:dormamu/src/events/models/event_list_state.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'event_list.dart';
 
 /// Displays all events for a given [EventType].
 class EventTab extends StatelessWidget {
@@ -14,6 +18,10 @@ class EventTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('$_eventType'));
+    return Consumer<EventListState>(builder: (_, listState, __) {
+      return EventList(
+        events: listState.getEventsByType(_eventType),
+      );
+    });
   }
 }
