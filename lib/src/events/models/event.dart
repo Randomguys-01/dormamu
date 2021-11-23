@@ -9,6 +9,10 @@
 enum EventType { community, private }
 
 class Event {
+
+  /// The id used to identify this event.
+  final int id;
+
   /// The name or title of the event.
   final String name;
 
@@ -26,6 +30,7 @@ class Event {
 
   /// Default constructor requires all fields.
   const Event({
+    required this.id,
     required this.name,
     required this.description,
     required this.eventType,
