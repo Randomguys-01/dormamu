@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 //Colors
 const Color primaryColor = Color(0xFF8109C2);
+const Color secondaryColor = Color(0xFF63C3D5);
 
 const Color selectedItemColor = Colors.white;
 const Color unselectedItemColor = Color(0xFFAAAAAA);
@@ -18,6 +19,7 @@ ColorScheme get _colorScheme {
   //TODO: use ColorScheme();
   return ThemeData().colorScheme.copyWith(
     primary: primaryColor,
+    secondary: secondaryColor,
   );
 }
 
