@@ -8,6 +8,19 @@
 /// friends.
 enum EventType { community, private }
 
+/// Provides utilities for [EventType].
+extension EventTypeUtils on EventType {
+  /// Provides a short explanation of each [EventType].
+  String get description {
+    switch (this) {
+      case EventType.community:
+        return "Community events are open to anyone.";
+      case EventType.private:
+        return "Private events are invite-only.";
+    }
+  }
+}
+
 /// Represents an Event that can be created on the app.
 class Event {
   /// The id used to identify this event.
