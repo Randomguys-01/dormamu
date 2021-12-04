@@ -38,9 +38,6 @@ class Event {
   /// The date and time the event starts.
   final DateTime startDate;
 
-  /// The date and time the event ends.
-  final DateTime endDate;
-
   /// The number of likes this event has.
   final int likes;
 
@@ -51,7 +48,6 @@ class Event {
     required this.description,
     required this.eventType,
     required this.startDate,
-    required this.endDate,
     required this.likes,
   });
 }

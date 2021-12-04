@@ -10,7 +10,6 @@ class EventListState extends ChangeNotifier {
       description: "Join the Dormamu tem as we unveil our new app!",
       eventType: EventType.community,
       startDate: DateTime.now(),
-      endDate: DateTime.now(),
       likes: 99,
     ),
     Event(
@@ -19,7 +18,6 @@ class EventListState extends ChangeNotifier {
       description: "Great work! Developer only party this Friday!",
       eventType: EventType.private,
       startDate: DateTime.now(),
-      endDate: DateTime.now(),
       likes: 49,
     ),
     Event(
@@ -28,7 +26,6 @@ class EventListState extends ChangeNotifier {
       description: "Welcome to Drexel!",
       eventType: EventType.community,
       startDate: DateTime.now(),
-      endDate: DateTime.now(),
       likes: 999,
     ),
   ];
