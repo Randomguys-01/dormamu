@@ -19,9 +19,9 @@ mixin FormUtils {
     int? maxLength,
   ]) {
     if (input == null || input.isEmpty) {
-      return "$inputName cannot be blank";
+      return "$inputName is required";
     } else if (maxLength != null && input.length > maxLength) {
-      return "$inputName cannot $maxLength characters";
+      return "$inputName cannot exceed $maxLength characters";
     } else {
       return null;
     }
