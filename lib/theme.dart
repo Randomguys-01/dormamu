@@ -1,3 +1,4 @@
+import 'package:dormamu/src/utils/bed_input_border.dart';
 import 'package:flutter/material.dart';
 
 //Colors
@@ -11,6 +12,7 @@ ThemeData get dormamuTheme {
   return ThemeData(
     colorScheme: _colorScheme,
     bottomNavigationBarTheme: _bottomNavigationBarTheme,
+    inputDecorationTheme: _inputDecorationTheme,
     navigationRailTheme: _navigationRailTheme,
   );
 }
@@ -39,4 +41,22 @@ NavigationRailThemeData get _navigationRailTheme {
     unselectedIconTheme: IconThemeData(color: unselectedItemColor),
     unselectedLabelTextStyle: TextStyle(color: unselectedItemColor),
   );
+}
+
+InputDecorationTheme get _inputDecorationTheme {
+  return const InputDecorationTheme(
+      filled: true,
+      fillColor: Color(0xFFBBBBBB),
+      border: UnderlineInputBorder(
+        borderRadius: BorderRadius.only(topRight: Radius.circular(25)),
+      ),
+      helperStyle: TextStyle(
+        color: primaryColor,
+      ),
+      focusedBorder: BedInputBorder(
+        borderSide: BorderSide(
+          color: primaryColor,
+          width: 2,
+        ),
+      ));
 }
