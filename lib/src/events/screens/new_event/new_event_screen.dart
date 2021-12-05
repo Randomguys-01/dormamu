@@ -1,10 +1,10 @@
 import 'package:dormamu/src/events/models/event_list_state.dart';
-import 'package:dormamu/src/screens/new_event/widgets/create_event_fab.dart';
-import 'package:dormamu/src/screens/new_event/widgets/new_event_form.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'models/new_event_form_state.dart';
+import 'widgets/create_event_fab.dart';
+import 'widgets/new_event_form.dart';
 
 /// Allows the user to create a new [Event] via the [NewEventForm].
 class NewEventScreen extends StatelessWidget {

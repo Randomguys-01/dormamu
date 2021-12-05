@@ -1,10 +1,10 @@
 import 'package:dormamu/src/events/widgets/event_tab.dart';
-import 'package:dormamu/src/screens/new_event/new_event_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'models/event.dart';
 import 'models/event_list_state.dart';
+import 'screens/new_event/new_event_screen.dart';
 
 class EventsDestination extends StatelessWidget {
   const EventsDestination({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class EventsDestination extends StatelessWidget {
       initialIndex: 0,
       length: 2,
       child: ChangeNotifierProvider(
-        create: (_) => EventListState(),
+          create: (_) => EventListState(),
           builder: (context, _) {
             return Scaffold(
               appBar: AppBar(
@@ -36,18 +36,18 @@ class EventsDestination extends StatelessWidget {
               floatingActionButton: FloatingActionButton(
                 child: const Icon(Icons.add),
                 onPressed: () {
-                  final eventListState = Provider.of<EventListState>(context, listen: false);
+                  final eventListState =
+                      Provider.of<EventListState>(context, listen: false);
                   Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => NewEventScreen(eventListState: eventListState),
-                    )
-                  );
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) =>
+                            NewEventScreen(eventListState: eventListState),
+                      ));
                 },
               ),
             );
-          }
-      ),
+          }),
     );
   }
 }

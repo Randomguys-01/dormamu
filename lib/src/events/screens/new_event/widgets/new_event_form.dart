@@ -1,5 +1,5 @@
 import 'package:dormamu/src/events/models/event.dart';
-import 'package:dormamu/src/screens/new_event/models/new_event_form_state.dart';
+import 'package:dormamu/src/events/screens/new_event/models/new_event_form_state.dart';
 import 'package:dormamu/src/utils/form_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
