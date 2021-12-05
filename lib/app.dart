@@ -1,9 +1,10 @@
-import 'package:dormamu/src/navigation.dart';
-import 'package:dormamu/src/state/navigation_state.dart';
-import 'package:dormamu/src/utils/destination.dart';
-import 'package:dormamu/theme.dart' as theme;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import 'src/navigation.dart';
+import 'src/state/navigation_state.dart';
+import 'src/utils/destination.dart';
+import 'theme.dart' as theme;
 
 /// The main widget of the Dormamu app.
 ///

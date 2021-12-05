@@ -1,9 +1,10 @@
-import 'package:dormamu/src/screens/events.dart';
-import 'package:dormamu/src/screens/messaging.dart';
-import 'package:dormamu/src/screens/tools.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
+import '../screens/events.dart';
+import '../screens/messaging.dart';
+import '../screens/tools.dart';
 
 ///Defines screens on navigation widgets.
 ///

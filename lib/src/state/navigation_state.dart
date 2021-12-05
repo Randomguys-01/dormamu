@@ -1,5 +1,6 @@
-import 'package:dormamu/src/utils/destination.dart';
 import 'package:flutter/cupertino.dart';
+
+import '../utils/destination.dart';
 
 /// Maintains the navigational state of the app.
 ///

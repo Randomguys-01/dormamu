@@ -1,10 +1,10 @@
-import 'package:dormamu/src/state/navigation_state.dart';
-import 'package:dormamu/src/utils/destination.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../theme.dart' as theme;
+import 'state/navigation_state.dart';
+import 'utils/destination.dart';
 
 /// Determines if a [DormamuNavigationBar] is needed and builds it if necessary.
 ///
