@@ -20,9 +20,9 @@ ThemeData get dormamuTheme {
 ColorScheme get _colorScheme {
   //TODO: use ColorScheme();
   return ThemeData().colorScheme.copyWith(
-    primary: primaryColor,
-    secondary: secondaryColor,
-  );
+        primary: primaryColor,
+        secondary: secondaryColor,
+      );
 }
 
 BottomNavigationBarThemeData get _bottomNavigationBarTheme {
