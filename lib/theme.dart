@@ -1,4 +1,5 @@
-import 'package:dormamu/src/utils/bed_input_border.dart';
+import 'package:dormamu/src/utils/decoration/bed_input_border.dart';
+import 'package:dormamu/src/utils/decoration/bed_shape.dart';
 import 'package:flutter/material.dart';
 
 //Colors
@@ -12,6 +13,7 @@ ThemeData get dormamuTheme {
   return ThemeData(
     colorScheme: _colorScheme,
     bottomNavigationBarTheme: _bottomNavigationBarTheme,
+    cardTheme: _cardTheme,
     inputDecorationTheme: _inputDecorationTheme,
     navigationRailTheme: _navigationRailTheme,
   );
@@ -30,6 +32,12 @@ BottomNavigationBarThemeData get _bottomNavigationBarTheme {
     backgroundColor: primaryColor,
     selectedItemColor: selectedItemColor,
     unselectedItemColor: unselectedItemColor,
+  );
+}
+
+CardTheme get _cardTheme {
+  return const CardTheme(
+    shape: BedShape(),
   );
 }
 
