@@ -1,4 +1,4 @@
-import 'package:dormamu/src/utils/decoration/bed_input_border.dart';
+import 'package:dormamu/src/utils/bed_input_border.dart';
 import 'package:dormamu/src/utils/decoration/bed_shape.dart';
 import 'package:flutter/material.dart';
 
