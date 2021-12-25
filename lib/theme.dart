@@ -14,6 +14,7 @@ ThemeData get dormamuTheme {
     colorScheme: _colorScheme,
     bottomNavigationBarTheme: _bottomNavigationBarTheme,
     cardTheme: _cardTheme,
+    floatingActionButtonTheme: _fabTheme,
     inputDecorationTheme: _inputDecorationTheme,
     navigationRailTheme: _navigationRailTheme,
   );
@@ -38,6 +39,12 @@ BottomNavigationBarThemeData get _bottomNavigationBarTheme {
 CardTheme get _cardTheme {
   return const CardTheme(
     shape: BedShape(),
+  );
+}
+
+FloatingActionButtonThemeData get _fabTheme {
+  return const FloatingActionButtonThemeData(
+    backgroundColor: secondaryColor,
   );
 }
 
