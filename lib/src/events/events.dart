@@ -1,4 +1,5 @@
 import 'package:dormamu/src/events/widgets/event_tab.dart';
+import 'package:dormamu/src/utils/decoration/pillow_shape.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -35,6 +36,7 @@ class EventsDestination extends StatelessWidget {
               ),
               floatingActionButton: FloatingActionButton(
                 child: const Icon(Icons.add),
+                shape: PillowShape(),
                 onPressed: () {
                   final eventListState =
                       Provider.of<EventListState>(context, listen: false);
