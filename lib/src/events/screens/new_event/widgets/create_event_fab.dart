@@ -1,6 +1,7 @@
 import 'package:dormamu/src/events/models/event.dart';
 import 'package:dormamu/src/events/models/event_list_state.dart';
 import 'package:dormamu/src/events/screens/new_event/models/new_event_form_state.dart';
+import 'package:dormamu/src/utils/decoration/bed_shape.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -24,6 +25,7 @@ class CreateEventFAB extends StatelessWidget {
     return FloatingActionButton.extended(
       label: const Text('Create Event'),
       icon: const Icon(Icons.event),
+      shape: BedShape(),
       onPressed: () => _createEvent(context),
     );
   }
