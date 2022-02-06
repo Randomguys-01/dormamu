@@ -26,14 +26,20 @@ class Event {
   /// The id used to identify this event.
   final int id;
 
+  /// The type of event. See [EventType].
+  final EventType eventType;
+
   /// The name or title of the event.
   final String name;
 
   /// A description of the event and event details.
   final String description;
 
-  /// The type of event. See [EventType].
-  final EventType eventType;
+  /// The location of the event.
+  final String location;
+
+  /// The organizer of the event.
+  final String organizer;
 
   /// The date and time the event starts.
   final DateTime startDate;
@@ -44,9 +50,11 @@ class Event {
   /// Default constructor requires all fields.
   const Event({
     required this.id,
+    required this.eventType,
     required this.name,
     required this.description,
-    required this.eventType,
+    required this.location,
+    required this.organizer,
     required this.startDate,
     required this.likes,
   });

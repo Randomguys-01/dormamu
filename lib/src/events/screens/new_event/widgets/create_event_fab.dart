@@ -48,6 +48,8 @@ class CreateEventFAB extends StatelessWidget {
         id: 4,
         name: newEventForm.eventName!,
         description: newEventForm.eventDescription!,
+        location: "Drexel University", //TODO
+        organizer: "Drexel",
         eventType: newEventForm.eventType!,
         startDate: newEventForm.eventDate!,
         likes: 0,
