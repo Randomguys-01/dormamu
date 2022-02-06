@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 /// down to the [BorderSide.bottomRight] and defines the container's shape.
 ///
 /// See [UnderlineInputBorder].
-class BedInputBorder extends UnderlineInputBorder {
+/// TODO: let's make this a blanket; Maybe ad a purple shadow beneath the line
+class BedInputBorder extends UnderlineInputBorder {//todo: maybe blanket border
   /// Default constructor
   const BedInputBorder({
     BorderSide borderSide = const BorderSide(),

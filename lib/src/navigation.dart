@@ -50,7 +50,7 @@ class DormamuBottomNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     //Rebuilds every time there is a change in navigation state.
     return Consumer<NavigationState>(builder: (_, navigationData, __) {
-      return BottomNavigationBar(
+      return BottomNavigationBar(// TODO: change to NavigationBar(m3)
         currentIndex: navigationData.currentDestination.index,
         //Creates an item for every Destination.
         items: <BottomNavigationBarItem>[
