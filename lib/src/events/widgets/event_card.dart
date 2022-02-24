@@ -26,12 +26,9 @@ class EventCard extends StatelessWidget {
             height: 250,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(4.0),
-              child: AspectRatio(
+              child: const AspectRatio(
                 aspectRatio: 16 / 9,
-                child: Image.asset(
-                  'assets/images/test/dormamu.png',
-                  fit: BoxFit.fitWidth,
-                ),
+                child: Placeholder(),
               ),
             ),
           ),
