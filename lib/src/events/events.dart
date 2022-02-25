@@ -1,3 +1,4 @@
+import 'package:dormamu/src/events/pages/new_event/new_event_screen.dart';
 import 'package:dormamu/src/events/widgets/event_tab.dart';
 import 'package:dormamu/src/utils/decoration/pillow_shape.dart';
 import 'package:flutter/material.dart';
@@ -5,7 +6,6 @@ import 'package:provider/provider.dart';
 
 import 'models/event.dart';
 import 'models/event_list_state.dart';
-import 'screens/new_event/new_event_screen.dart';
 
 class EventsDestination extends StatelessWidget {
   const EventsDestination({Key? key}) : super(key: key);

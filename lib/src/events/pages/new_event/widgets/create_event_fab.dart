@@ -1,9 +1,10 @@
 import 'package:dormamu/src/events/models/event.dart';
 import 'package:dormamu/src/events/models/event_list_state.dart';
-import 'package:dormamu/src/events/screens/new_event/models/new_event_form_state.dart';
 import 'package:dormamu/src/utils/decoration/bed_shape.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../models/new_event_form_state.dart';
 
 /// [FloatingActionButton.extended] triggers the creation of a new [Event].
 class CreateEventFAB extends StatelessWidget {

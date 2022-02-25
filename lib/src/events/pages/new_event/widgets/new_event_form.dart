@@ -1,9 +1,11 @@
 import 'package:dormamu/src/events/models/event.dart';
-import 'package:dormamu/src/events/screens/new_event/models/new_event_form_state.dart';
+import 'package:dormamu/src/events/pages/new_event/models/new_event_form_state.dart';
 import 'package:dormamu/src/utils/form_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
+
+import '../models/new_event_form_state.dart';
 
 class NewEventForm extends StatefulWidget {
   /// Default constructor
